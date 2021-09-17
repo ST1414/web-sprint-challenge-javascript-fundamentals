@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// ANSWER: This is an example of closure.  Variables can be passed down, but not up.  The nested function this has access to both the external and internal variables.
 
 
 
@@ -28,10 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = 0;
+  for (let i = 1; i <= number; i++){
+    sum += i;
   }
+  return sum;
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,9 +59,16 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(animalArr){
+
+    let displayNames = [];
+  
+    animalArr.forEach( element => {displayNames.push(`name: ${element.animal_name}, scientific: ${element.scientific_name}`)} );
+
+    return displayNames;
   }
+  
+  console.log ('============ END OF REQUEST 1 ==========')
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -67,11 +77,14 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(zooAnimals){
+    let zooAnimalsLC = [];
+    zooAnimalsLC = zooAnimals.map( x => x.animal_name.toLowerCase());
+    return zooAnimalsLC;
   }
-  
-  
+  console.log ('============ END OF REQUEST 2 ==========')
+
+
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
@@ -80,7 +93,8 @@ const zooAnimals = [
   function lowPopulationAnimals(/*Your Code Here*/){
     /*Your Code Here*/
   }
-  
+  console.log ('============ END OF REQUEST 3 ==========')
+
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
