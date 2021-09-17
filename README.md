@@ -25,14 +25,40 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+    <!-- 
+        MAP -- We use map to perform a task on every element, and return the results into a new array. This could include: copying specific pieces of data from each array element or performing a mathematical function.  You are also able to embed conditions in the call back function passed to map, so that the task is only performed on certain elements
+
+        REDUCE -- We use reduce to perform a calculation on a specific field and to return a single number.  For example, in an array of State objects, totalling the population of states in a specific region.
+
+        FILTER -- We use filter to return an array of only the elements which pass a condition.
+    -->
 
 2. Explain the difference between a callback and a higher order function.
+    <!-- 
+        HIGHER ORDER FUNCTION -- A higher order function accepts a function as a parameter.
+        CALLBACK FUNCTION  -- A callback function, is a function passed to a higher order function, as a parameter
+     -->
 
 3. Explain what a closure is.
+    <!-- 
+        CLOSURE -- Is when an inner function, reaches into an outer function, to grab a value defined in that outer function.  A closure will create a memory of that inner functions lexical environment, meaning it will have access to that outer function's value, after that outer function's call has ended.
+     -->
 
 4. Describe the four principles of the 'this' keyword.
+    <!-- 
+        NEW -- A new binding occurs when a constructor function is called (via the new keyword).  Anything passed to the constructor and assigned to properties defined with {this} are bound to the newly created object
+
+        IMPLICIT -- An implicit binding happens when calling a method, where this is bound to the object making the method call (i.e., to the left of the dot).  This is the most common binding principle.  E.g., objectName.functionName( ) ... this would apply to {objectName} because it is to the left of the dot
+
+        EXPLICIT -- When we use .call( ), apply( ), or bind ( ); which are functions built into the Function prototype.  Each method has its own use cases, but all are required to explicitly bind a function that is external to the object.  Call( ) will run the function immediately and requires each parameter (if required) passed independently.  Apply( ) is the same as call but you can pass the arguments as an array.  Bind( ) allows you to create the new function on the object but to not run it immediately.
+
+        WINDOW -- When this is used and JS is not given a reference to how to use it.  JS will then bind to the Window object.
+     -->
 
 5. Why do we need super() in an extended class?
+    <!-- 
+        super( ) replaces the call( ) function in a constructor function. Super tell JS that when an object is being created, that extends another object, to go and get the properties associated to that parent object.  The argument passed will then populate those keys accordingly
+     -->
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
